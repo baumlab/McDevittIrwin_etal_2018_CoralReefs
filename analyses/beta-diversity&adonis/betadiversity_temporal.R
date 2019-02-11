@@ -349,11 +349,18 @@ p3
 
 ##################################################
 # COMBINE PLOTS 
-p=p+ annotate("text",x=.5, y=0.9, label="(d)",fontface=2, size=4.5)
-p1=p1 + annotate("text", x=1.34, y=0.9, label="(c) Montipora aequituberculata",fontface=2, size=4.5) + annotate("text", x=2.5, y=0.84, label="*", size=6) 
+p=p+ annotate("text",x=.5, y=0.9, label="(d)", size=4.5)
+p1=p1 + annotate("text", x=1.34, y=0.9, 
+                 label="(c)~italic('Montipora aequituberculata')",
+                 parse=TRUE, size=4.5) + 
+  annotate("text", x=2.5, y=0.84, label="*", size=6) 
 
-p2=p2+ annotate("text", x=.5, y=0.9, label="(b)",fontface=2, size=4.5) + ggtitle("High disturbance")
-p3=p3 + annotate("text", x=.95, y=0.9, label="(a) Porites lobata",fontface=2, size=4.5) + annotate("text", x=2.5, y=0.84, label="*", size=6)+ ggtitle("Low disturbance")
+p2=p2+ annotate("text", x=.5, y=0.9, 
+                label="(b)", size=4.5) + 
+  ggtitle("High disturbance")
+p3=p3 + annotate("text", x=.95, y=0.9, 
+                 label="(a)~italic('Porites lobata')",parse=TRUE, size=4.5) + 
+  annotate("text", x=2.5, y=0.84, label="*", size=6)+ ggtitle("Low disturbance")
 
 # shared legend code
 library(ggplot2)

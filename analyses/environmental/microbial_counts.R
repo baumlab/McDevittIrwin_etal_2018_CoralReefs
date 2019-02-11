@@ -166,8 +166,8 @@ dev.off()
 
 
 # combine plots: just human disturbance and expedition
-p1=p1+ annotate("text", x=.5, y=550000, label="(a)",fontface=2, size=4.5)
-p2=p2 + annotate("text", x=.5, y=550000, label="(b)", fontface=2, size=4.5) + annotate("text", x=2.4, y=525000, label="*", size=8)
+p1=p1+ annotate("text", x=.5, y=550000, label="(a)", size=4.5)
+p2=p2 + annotate("text", x=.5, y=550000, label="(b)", size=4.5) + annotate("text", x=2.4, y=525000, label="*", size=8)
 p1
 p2
 

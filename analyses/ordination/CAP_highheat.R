@@ -94,7 +94,10 @@ pdf(file="figures/secondmito/top10removed/ordination/CAPdistgenus_reefnested_cor
 otu_tablef_no10_coralf_sm_866f_julyf_rel_cap = ordinate(otu_tablef_no10_coralf_sm_866f_julyf_rel, formula=otu_tablef_no10_coralf_sm_866f_julyf_rel ~ field_host_genus_id + human_disturbance2/reef_name, "CAP", "bray")
 otu_tablef_no10_coralf_sm_866f_julyf_rel_cap #18.48% explained 
 p1 = plot_ordination(otu_tablef_no10_coralf_sm_866f_julyf_rel, otu_tablef_no10_coralf_sm_866f_julyf_rel_cap, color="human_disturbance2", shape="field_host_genus_id")+ scale_color_manual(values=c("darkorange2", "darkgoldenrod1"))
-p1 = p1 + geom_point(size=3) +stat_ellipse() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + labs(color='Coral Species') + labs(shape='Local Disturbance')
+p1 = p1 + geom_point(size=3) +stat_ellipse() + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + 
+  labs(color='Local Disturbance') + 
+  labs(shape='Coral Species') + 
+  scale_shape_discrete(breaks= c("Porites", "Montipora"), labels = c(expression(italic("Porites")), expression(italic("Montipora"))))
 p1
 
 dev.off()

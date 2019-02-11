@@ -18,7 +18,7 @@ load("data/secondmito/lowreads_pruned/maycoral_CAP.RData")
 ls()
 
 may_p5=p5 
-may_p5=may_p5 + annotate("text", x=-1.9, y=2.8, label="(a)",fontface=2, size=4.5) +ggtitle("Low heat stress")
+may_p5=may_p5 + annotate("text", x=-1.9, y=2.8, label="(a)", size=4.5) +ggtitle("Low heat stress")
 
 
 # July
@@ -26,7 +26,7 @@ load("data/secondmito/lowreads_pruned/july_coral_CAP.Rdata")
 ls()
 
 july_p1=p1
-july_p1=july_p1 + annotate("text", x=-3.6, y=2.8, label="(b)",fontface=2, size=4.5) + ggtitle("High heat stress")
+july_p1=july_p1 + annotate("text", x=-3.6, y=2.8, label="(b)", size=4.5) + ggtitle("High heat stress")
 
 
 # shared legend code

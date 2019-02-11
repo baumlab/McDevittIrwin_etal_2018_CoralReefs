@@ -125,18 +125,17 @@ pdf(file="figures/secondmito/top10removed/diversity/Shannon_corals_866rare_fitte
 
 p2= ggplot(model9.comb_df, aes(field_host_genus_id, lsmean, col=human_disturbance2, shape=field_host_genus_id)) 
 p2= p2 + geom_pointrange(aes(ymin=lower.CL, ymax=upper.CL), size=1, position=position_dodge(width=0.5))
-p2=p2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), axis.text=element_text(size=12),axis.title=element_text(size=14)) 
+p2=p2 + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(), axis.text.y=element_text(size=12), axis.text.x=element_text(size=12, face="italic"),axis.title=element_text(size=14)) 
 p2= p2 + labs(x="") +labs(y="Shannon Fitted Means") + labs(colour="Local Disturbance", shape= "Coral Species")
 p2= p2 + scale_colour_manual(values=c("darkgoldenrod1","darkorange2")) + scale_y_continuous(limits = c(1.3, 5))
-p2= p2 + scale_shape_manual(values=c(17,19))
-
+p2= p2 + scale_shape_manual(values=c(17,19), labels = c(expression(italic("Porites")), expression(italic("Montipora"))))
 p2
 
 dev.off()
 
 
 # save for ms
-may_p2=p2+ annotate("text", x=.5, y= 5.0, label="(a)", fontface=2, size=4.5)
+may_p2=p2+ annotate("text", x=.5, y= 5.0, label="(a)", size=4.5)
 may_p2
 save(may_p2, file="data/secondmito/lowreads_pruned/may_coral_alphamodel_combined.Rdata")
 ########################################################

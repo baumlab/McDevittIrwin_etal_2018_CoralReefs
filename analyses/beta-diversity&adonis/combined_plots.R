@@ -172,11 +172,18 @@ p3
 
 ################################################################################
 # combine the plots
-p=p+ annotate("text",x=.91, y=0.88, label="(a) Porites lobata", fontface=2, size=4.5)+ annotate("text", x=2.5, y=0.88, label="*", size=6) +ggtitle("Low heat stress")
-p1=p1 + annotate("text", x=1.32, y=0.88, label="(c) Montipora aequituberculata", fontface=2, size=4.5) 
-
-p2=p2+ annotate("text", x=.55, y=0.88, label="(b)", fontface=2, size=4.5) + ggtitle("High heat stress")
-p3=p3 + annotate("text",x=.55, y=0.88, label="(d)", fontface=2, size=4.5) 
+p=p+ annotate("text",x=.91, y=0.88, 
+              label="(a)~italic('Porites lobata')", 
+              size=4.5, parse=TRUE)+ 
+  annotate("text", x=2.5, y=0.88, label="*", size=6) +
+  ggtitle("Low heat stress")
+p
+p1 = p1 + annotate("text", x=1.32, y=0.88, 
+              label="(c)~italic('Montipora aequituberculata')", 
+              size=4.5, parse=TRUE) 
+p1
+p2=p2+ annotate("text", x=.55, y=0.88, label="(b)", size=4.5) + ggtitle("High heat stress")
+p3=p3 + annotate("text",x=.55, y=0.88, label="(d)", size=4.5) 
 
 # shared legend code
 library(ggplot2)
